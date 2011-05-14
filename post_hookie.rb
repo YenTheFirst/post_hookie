@@ -30,5 +30,5 @@ end
 
 get '/hook/:name' do
 	@post = PostedData.first(:name=>params[:name], :order=>[:created_at.desc])
-	@post ? haml(:show_hook) : [404]
+	@post ? haml(:show_hook) : [404,{},"could not find #{params[:name]}"]
 end
