@@ -1,6 +1,9 @@
 require 'bundler'
-Bundler.require(:default)
-require 'dm-postgres-adapter' if ENV['RACK_ENV'] == 'production'
+if ENV['RACK_ENV'] == 'production'
+	Bundler.require(:default,:production)
+else
+	Bundler.require(:default)
+end
 
 require './post_hookie.rb'
 run Sinatra::Application
