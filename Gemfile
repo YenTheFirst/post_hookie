@@ -3,7 +3,10 @@ gem 'sinatra'
 gem 'data_mapper'
 gem 'haml'
 
-gem 'dm-sqlite-adapter'   #for localhost
+group :development, :test do
+	gem 'dm-sqlite-adapter'   #for localhost
+end
+
 group :production do
 	gem 'dm-postgres-adapter' #for heroku
 end
