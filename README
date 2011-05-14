@@ -1,0 +1,7 @@
+Post Hookie lets you skip out on having to create a public-facing server to test HTTP POST hooks from 3rd party services.
+
+Want to develop a github post-receive hook, but don't have hosting yet? play PostHookie!
+
+1. in the weebhook section, point the post-receive hook URL to post-hookie.heroku.com/hook/a_fancy_name
+2. go to post-hookie.heroku.com/hook/a_fancy_name
+3. see the raw form data, and have a pre-formated curl command to test it locally!
